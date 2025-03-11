@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="loja_vs.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:loja_vs"
+    Shell.FlyoutBehavior="Flyout"
+    Title="loja_vs">
+
+    <FlyoutItem Title="Home">
+        <ShellContent
+            Title=" "
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Shop">
+        <ShellContent
+            
+        Title="Shop"
+        ContentTemplate="{DataTemplate local:page1}"
+        Route="page1" />
+    </FlyoutItem>
+
+</Shell>

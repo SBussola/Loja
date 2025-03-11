@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="loja_vs.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Image
+                Source="https://png.pngtree.com/png-clipart/20231211/original/pngtree-pink-cotton-bra-isolated-on-white-background-isolated-isolated-on-photo-png-image_13820949.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+
+            <Label
+                Text="Welcome to"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                TextColor="Purple"/>
+
+            <Border 
+                BackgroundColor="Black"
+                Padding="10">
+
+                <Label
+                    Text="Victoria's Secret"
+                    Style="{StaticResource SubHeadline}" 
+                    TextColor="Aquamarine"
+                    FontFamily="Lucida Handwriting"/>
+            </Border>
+
+            <Button
+                x:Name="BuyButton"
+                Text="Buy me, Pick me, Choose me"
+                HorizontalOptions="Fill"
+                BackgroundColor="DeepPink"
+                Clicked="NavigateTo"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

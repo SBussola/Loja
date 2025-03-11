@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="loja_vs.page1"
+             Title="">
+
+    <ContentPage.Resources>
+        <Style x:Key="ProductFrameStyle" TargetType="Frame">
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BackgroundColor" Value="#F8F8F8"/>
+            <Setter Property="CornerRadius" Value="15"/>
+        </Style>
+        <Style x:Key="ProductLabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+        </Style>
+        <Style x:Key="PriceLabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="TextColor" Value="Green"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+        </Style>
+        <Style x:Key="BuyButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Purple"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Margin" Value="0,10,0,0"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Label 
+                Text="Shop"
+                Style="{StaticResource Headline}"
+                TextColor="DeepPink"
+                FontFamily="Arial"
+                HorizontalOptions="Center"
+                Margin="0,0,0,20"/>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto" RowSpacing="20" ColumnSpacing="20">
+                <!-- Produto 1 -->
+                <Frame Grid.Column="0" Style="{StaticResource ProductFrameStyle}">
+                    <VerticalStackLayout>
+                        <Image 
+                            Source="https://png.pngtree.com/png-clipart/20231211/original/pngtree-pink-cotton-bra-isolated-on-white-background-isolated-isolated-on-photo-png-image_13820949.png"
+                            HeightRequest="150"
+                            Aspect="AspectFit"/>
+                        <Label 
+                            Text="Pink Cotton Bra"
+                            Style="{StaticResource ProductLabelStyle}"/>
+                        <Label 
+                            Text="$25.99"
+                            Style="{StaticResource PriceLabelStyle}"/>
+                        <Button 
+                            Text="Buy" 
+                            Style="{StaticResource BuyButtonStyle}"
+                            Clicked="OnBuyButtonClicked"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Produto 2 -->
+                <Frame Grid.Column="1" Style="{StaticResource ProductFrameStyle}">
+                    <VerticalStackLayout>
+                        <Image 
+                            Source="https://cdn.platform.next/common/items/default/default/itemimages/3_4Ratio/product/lge/R74607s5.jpg?im=Resize,width=180"
+                            HeightRequest="150"
+                            Aspect="AspectFit"/>
+                        <Label 
+                            Text="Black Lace Bra"
+                            Style="{StaticResource ProductLabelStyle}"/>
+                        <Label 
+                            Text="$29.99"
+                            Style="{StaticResource PriceLabelStyle}"/>
+                        <Button 
+                            Text="Buy" 
+                            Style="{StaticResource BuyButtonStyle}"
+                            Clicked="OnBuyButtonClicked"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
