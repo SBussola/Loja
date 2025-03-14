@@ -22,4 +22,12 @@
         Route="page1" />
     </FlyoutItem>
 
+    <FlyoutItem Title="Carrinho">
+        <ShellContent
+        
+    Title="Carrinho"
+    ContentTemplate="{DataTemplate local:Carrinho}"
+    Route="carrinho" />
+    </FlyoutItem>
+
 </Shell>

@@ -5,10 +5,13 @@
              Title="">
 
     <ContentPage.Resources>
-        <Style x:Key="ProductFrameStyle" TargetType="Frame">
-            <Setter Property="Padding" Value="10"/>
+        <Style x:Key="ProductBorderStyle" TargetType="Border">
             <Setter Property="BackgroundColor" Value="#F8F8F8"/>
-            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="StrokeShape">
+                <Setter.Value>
+                    <RoundRectangle CornerRadius="15"/>
+                </Setter.Value>
+            </Setter>
         </Style>
         <Style x:Key="ProductLabelStyle" TargetType="Label">
             <Setter Property="FontSize" Value="16"/>
@@ -32,16 +35,16 @@
         <VerticalStackLayout Padding="20">
             <Label 
                 Text="Shop"
-                Style="{StaticResource Headline}"
                 TextColor="DeepPink"
-                FontFamily="Arial"
+                FontSize="24"
+                FontAttributes="Bold"
                 HorizontalOptions="Center"
                 Margin="0,0,0,20"/>
 
             <Grid ColumnDefinitions="*,*" RowDefinitions="Auto" RowSpacing="20" ColumnSpacing="20">
                 <!-- Produto 1 -->
-                <Frame Grid.Column="0" Style="{StaticResource ProductFrameStyle}">
-                    <VerticalStackLayout>
+                <Border Grid.Column="0" Style="{StaticResource ProductBorderStyle}">
+                    <VerticalStackLayout Padding="10">
                         <Image 
                             Source="https://png.pngtree.com/png-clipart/20231211/original/pngtree-pink-cotton-bra-isolated-on-white-background-isolated-isolated-on-photo-png-image_13820949.png"
                             HeightRequest="150"
@@ -57,11 +60,11 @@
                             Style="{StaticResource BuyButtonStyle}"
                             Clicked="OnBuyButtonClicked"/>
                     </VerticalStackLayout>
-                </Frame>
+                </Border>
 
                 <!-- Produto 2 -->
-                <Frame Grid.Column="1" Style="{StaticResource ProductFrameStyle}">
-                    <VerticalStackLayout>
+                <Border Grid.Column="1" Style="{StaticResource ProductBorderStyle}">
+                    <VerticalStackLayout Padding="10">
                         <Image 
                             Source="https://cdn.platform.next/common/items/default/default/itemimages/3_4Ratio/product/lge/R74607s5.jpg?im=Resize,width=180"
                             HeightRequest="150"
@@ -77,7 +80,7 @@
                             Style="{StaticResource BuyButtonStyle}"
                             Clicked="OnBuyButtonClicked"/>
                     </VerticalStackLayout>
-                </Frame>
+                </Border>
 
             </Grid>
         </VerticalStackLayout>
